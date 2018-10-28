@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 form-group">
+      <!-- <input type="text" class="form-control" (input)="onServerName($event)"> -->
+      <input type="text" class="form-control" [(ngModel)]="serverName">
+    </div>
+  </div>
+</div>
+<p>
+  {{serverName}}
+</p>
+
+
+<hr>
+
+<div class="conatiner">
+  <div class="row">
+    <div class="col-xs-12 form-group">
+      <button type="button" class="btn btn-primary" [disabled]="!allownewServer" (click)="onCreateServer()"> Add new server
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p *ngIf="serverCreated"> server was creted with the name {{serverName }} </p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<app-server></app-server>
+<app-server></app-server>
